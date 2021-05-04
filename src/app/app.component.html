@@ -1,3 +1,30 @@
 <ion-app>
+  
   <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/home">
+          <ion-icon name="home" slot="start"></ion-icon>
+          Home
+         </ion-item>
+        <ion-item routerLink="/about">
+          <ion-icon name="information-circle" slot="start"></ion-icon>
+          About
+        </ion-item>
+        <ion-item routerLink="/contact">
+          <ion-icon name="call" slot="start"></ion-icon>
+          Contact
+        </ion-item>
+        
+      </ion-list>
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
